@@ -1,0 +1,137 @@
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--light-gray);
+    font-family: Karla , sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 280px ;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.header{
+    background-color: white;
+    padding: 25px ;
+    color: var(--grayish-blue);
+    
+}
+.header h3{
+    color: var(--cyan);
+    
+}
+.header p:nth-child(2){
+    color: var(--bright-yellow);
+    padding: 20px 0px;
+    font-weight: bolder;
+}
+
+.body{
+    background-color: var(--cyan);
+    padding: 25px;
+    color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+    transition: 250ms ease-in-out;
+}
+
+.price-holder{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+.price-holder :last-child{
+    opacity: 0.6;
+    font-size: 15px;
+}
+span{
+    font-family: karla , sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 9px;
+}
+
+.body :nth-child(3){
+    padding-bottom: 25px;
+    font-size: 15px;
+}
+button{
+    color: white;
+    background-color: var(--bright-yellow);
+    width: calc(350 - 20);
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    border: transparent;
+    box-shadow: -4px 7px 31px -7px rgba(0,0,0,0.52);
+    transform-style: preserve-3d;
+    transition: 250ms ease-in-out;
+}
+button:hover{
+    transform: translateZ(40px);
+    color:hsl(228, 45%, 44%)
+}
+
+.footer{
+    padding: 25px;
+    background-color: var(--cyan);
+    opacity: 0.7;
+    color: white;
+}
+.footer :last-child{
+    width: 80.9%;
+    padding-top: 20px;
+    font-size: 14px;
+    opacity: 0.8
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 720px) {
+
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 700px ;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .two-column{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
